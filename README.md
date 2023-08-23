@@ -23,7 +23,7 @@ public class Player {
     @Id private final UUID uuid;
     private int level;
 
-    public PrestigesPlayer(final UUID uuid) {
+    public Player(final UUID uuid) {
         this.uuid = uuid;
         this.prestige = 0L;
     }
