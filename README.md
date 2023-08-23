@@ -3,6 +3,8 @@
 
 ## Simple system allows you to save Lists of Objects or HashMaps to a JSON file!
 
+### The Storage Class
+
 ```
 
 public class PlayerStorage extends JsonStorage<UUID, Player> {
@@ -15,6 +17,8 @@ public class PlayerStorage extends JsonStorage<UUID, Player> {
 
 ```
 
+### Object Class Example
+
 ```
 @Data (Makes Getters & Setters, using lombok)
 public class Player {
@@ -25,7 +29,7 @@ public class Player {
 
     public Player(final UUID uuid) {
         this.uuid = uuid;
-        this.prestige = 0L;
+        this.level = 0;
     }
 
 
@@ -33,9 +37,13 @@ public class Player {
 
 ```
 
+### Adding, Removing, Writing
+
 ```
 
 final Storage storage = new PlayerStorage(file);
+
+final UUID uuid = UUID.randomUUID();
 
 // adding a value
 storage.add(new Player(uuid));
