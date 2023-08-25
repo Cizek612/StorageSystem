@@ -5,7 +5,7 @@
 
 ### The Storage Class
 
-```
+```java
 
 public class PlayerStorage extends JsonStorage<UUID, Player> {
 
