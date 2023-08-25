@@ -19,8 +19,8 @@ public class PlayerStorage extends JsonStorage<UUID, Player> {
 
 ### Object Class Example
 
-```
-@Data (Makes Getters & Setters, using lombok)
+```java
+@Data 
 public class Player {
 
     // @Id must be the type of the key you have specified previously
@@ -39,7 +39,7 @@ public class Player {
 
 ### Adding, Removing, Writing
 
-```
+```java
 
 final Storage storage = new PlayerStorage(file);
 
