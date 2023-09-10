@@ -1,7 +1,7 @@
 # StorageSystem
 
 
-## Simple system allows you to save Lists of Objects or HashMaps to a JSON file!
+## Simple system allows you to save Lists of Objects or Maps to a JSON file!
 
 ### The Storage Class
 
@@ -53,3 +53,5 @@ storage.remove(uuid);
 
 storage.write()
 ```
+
+## Note: There is also SingleKeyedStorage & SingleKeyedJsonStorage which can be used for Lists
