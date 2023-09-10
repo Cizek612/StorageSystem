@@ -51,4 +51,10 @@ public abstract class SingleKeyedJsonStorage<T> implements SingleKeyedStorage<T>
     public void add(final Collection<T> values) {
         values.forEach(this::add);
     }
+    @SneakyThrows @Override
+    public void write() {
+        final Writer writer = new FileWriter(this.file);
+        StorageSystem.getGson().toJson(this.service.values(), writer);
+        writer.close();
+    }
 }
